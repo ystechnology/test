@@ -1,0 +1,149 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+
+.header {
+  .header_logo_pc {
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+  .header_nav {
+    .header_ul {
+      display: flex;
+      line-height: 90px;
+      margin-right: 35px;
+      font-size: 20px;
+      .header_li {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.cop_sp {
+  width: 100%;
+  height: 100vh;
+  #slideshow {
+    width: 100%;
+    // height: 100%;
+  }
+}
+
+// .cop {
+//   height: 100vh;
+//   .cop_fv {
+//     font-size: 50px;
+//     padding-top: 70px;
+//     padding-left: 50px;
+//   }
+//   .cop_text {
+//     font-size: 25px;
+//     padding-top: 20px;
+//     padding-left: 80px;
+//   }
+// }
+
+.about {
+  .about_fv {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+  .about_detail {
+    width: 90%;
+    height: 400px;
+    margin: 30px auto;
+    background-color: #eaebe6;
+    display: flex;
+    .about_img {
+      width:  49%;
+    }
+    .about_title {
+      padding-top: 40px;
+      font-size: 25px;
+      &--text {
+        padding-top: 40px;
+        line-height: 40px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.service {
+  .service_fv {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+  .service_content {
+    width: 90%;
+    margin: 100px auto;
+    .service_title {
+      width: 70%;
+      margin: 50px auto;
+    }
+    .service_img {
+      width: 70%;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+    .service_text {
+      width: 70%;
+      margin: 50px auto;
+      line-height: 40px;
+    }
+    .service_detail {
+      width: 70%;
+      margin: 50px auto;
+      font-size: 20px;
+    }
+  }
+}
+
+.detail {
+  .detail_fv {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 35px;
+  }
+  .detail_text {
+    width: 80%;
+    height: 340px;
+    line-height: 40px;
+    margin-top: 50px;
+  }
+}
+
+.footer {
+  .footer_content {
+    line-height: 40px;
+    padding-bottom: 70px;
+  }
+}
+
+.big {
+  font-size: 50px;
+}
+
+.header_logo_pc {
+  display: block;
+}
+
+.header_logo_sp {
+  display: none;
+}
+
+.cop_pc {
+  display: block;
+}
+
+.cop_sp {
+  display: none;
+}

@@ -1,0 +1,366 @@
+@import "mixin";
+
+$cWhite: white;
+$cBlack: black;
+$cMenuClose: $cBlack;
+$cMenuOpen: $cBlack;
+$cSubtitle: #535353;
+$cBase:dimgray;
+$cBased:lightgray;
+
+html {
+  font-family:  "游ゴシック体", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+
+}
+  body {
+    background-color: rgb(22, 21, 21);
+    color: $cBase;
+  }
+  #container {
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .header_logo_sp {
+      width: 50%;
+      height: 90px;
+      padding-left: 20px;
+      line-height: 90px;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+    }
+    .header_nav {
+      .header_ul {
+        display: flex;
+        line-height: 90px;
+        margin-right: 15px;
+        font-size: 10px;
+        .header_li {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+.cop_sp {
+  width: 100%;
+  height: 50vh;
+  #slideshow {
+    width: 100%;
+    // height: 100%;
+  }
+}
+
+.about {
+  width: 100%;
+  // height: 80vh;
+  .about_fv {
+    // font-size: 25px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 5px;
+    color: $cSubtitle;
+  }
+  .about_detail {
+    width: 90%;
+    margin: 30px auto;
+    background-color: #eaebe6;
+    .about_img {
+      position: relative;
+      text-align: center;
+      padding-top: 20px;
+    }
+    .about_title {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(59, 61, 59);
+      &--text {
+        font-size: 12px;
+        padding-top: 10px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.service {
+  width: 100%;
+  .service_fv {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 5px;
+    font-size: 2rem;
+    }
+  .service_content {
+    width: 80%;
+    margin: 0 auto;
+    .service_title {
+      padding-top: 20px;
+      padding-left: 10px;
+      margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .service_img {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(161, 161, 153);
+      }
+      &.inview {
+        &::after {
+          @include animation(
+            $name: kf-service-img,
+            $duration: 1.6s,
+            $timing-function: ease-in-out
+            );
+        }
+      }
+    }
+    .service_text {
+      margin-top: 30px;
+      text-shadow: -3px 2px 0 #000;
+
+    }
+    .service_detail {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+  }
+  .service_text {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5px;
+    font-size:15px;
+  }
+}
+// ---------------------------------
+@keyframes kf-service-img {
+  0% {
+    left: 0;
+    right: 100%;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}
+// ---------------------------------
+
+.img_move {
+  opacity: 0;
+  .inview & {
+    opacity: 1;
+    transition: transform 0.3s ease;
+    @include animation(
+      $name: kf-img-show,
+      $duration: 1.6s,
+      $timing-function: ease-in-out,
+      $fill-mode: normal
+      );
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@keyframes kf-img-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100%{
+  opacity: 1;
+  }
+}
+
+.hover-d {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // z-index: 3;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+    &:hover::before {
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.detail {
+  width: 100%;
+  .detail_fv {
+    color: $cSubtitle;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-left: 5px;
+    font-size: 2rem;
+    }
+  .detail_text {
+    width: 90%;
+    height: 320px;
+    margin: 20px auto;
+    color: $cBase;
+    background-color: #3d3d3c;
+    padding-left: 15px;
+    padding-top: 20px;
+    line-height: 30px;
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: 70px;
+  color: #eaebe6;
+  .footer_content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    .footer_title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .nav {
+      padding-top: 30px;
+      padding-bottom: 80px;
+      color: #eaebe6;
+    }
+  }
+  .footer_right {
+    font-size: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+// デザイン
+.main-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.sub-title {
+  display: block;
+  font-size: 14px;
+  color: $cSubtitle;
+}
+
+.service_title {
+  position: relative;
+  border-bottom: solid 1px $cBased;
+}
+
+.service_title:before {
+  content: "";
+  position: absolute;
+  background:$cBased;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  left: -15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.big {
+  font-size: 60px;
+}
+.f_a {
+  color: $cSubtitle;
+  font-size: 25px;
+}
+.t_a {
+  color: $cSubtitle;
+  font-size: 25px;
+}
+
+.tel {
+  color: $cBase;
+}
+
+  .swiper-container {
+    width: 100%;
+    height: 700px;
+}
+
+.swiper-slide {
+  height: 100vh;
+}
+
+.header_logo_pc {
+  display: none;
+}
+
+.cop_pc {
+  display: none;
+}
+
+
+.animation {
+  margin: 50px 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: #a09a9a;
+  }
+
+  .fadeInDown {
+   -webkit-animation-fill-mode:both;
+   -ms-animation-fill-mode:both;
+   animation-fill-mode:both;
+   -webkit-animation-duration:1s;
+   -ms-animation-duration:1s;
+   animation-duration:1s;
+   -webkit-animation-name: fadeInDown;
+   animation-name: fadeInDown;
+   visibility: visible !important;
+  }
+  @-webkit-keyframes fadeInDown {
+   0% { opacity: 0; -webkit-transform: translateY(-20px); }
+   100% { opacity: 1; -webkit-transform: translateY(0); }
+  }
+  @keyframes fadeInDown {
+   0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+   100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+  }

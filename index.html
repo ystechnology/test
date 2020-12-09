@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+
+
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+        $('a[href^="#"]').click(function() {
+          var speed = 500;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+
+  <title>FIXER.inc</title>
+</head>
+<body>
+
+  <div id="global-container">
+    <div id="container">
+      <div class="mobile-menu__cover"></div>
+        <header class="header">
+          <div class="header_logo_sp">
+            <img src="img/fixer_logo04.png" height="60" width="100" alt="">
+          </div>
+          <div class="header_logo_pc">
+            <img src="img/fixer_logo04.png" height="90" width="200" alt="">
+          </div>
+          <nav class="header_nav">
+            <ul class="header_ul">
+              <!-- <li class="header_li item"><a href="#1">About</a></li> -->
+              <li class="header_li item"><a href="#1">Service</a></li>
+              <li class="header_li item">
+                <a class="btn filled" href="#2">About</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- <button class="mobile-menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button> -->
+        </header>
+
+      <div class="cop_sp">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/fv_0b.jpg" width="100%" height="280" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv_text08.jpg" width="100%" height="280" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv2_02.jpg" width="100%" height="280" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv_text07.jpg" width="100%" height="280" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv02_05.jpg" width="100%" height="280" alt="">
+              </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination swiper-pagination-white"></div>
+      </div>
+        <!-- <div class="cop_fv">
+          Follow your dream
+        </div> -->
+        <!-- <div class="cop_text">
+          We influence and change the world
+        </div> -->
+      </div>
+
+      <div class="cop_pc">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/fv_0b.jpg" width="100%" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv_text07.jpg" width="100%" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/fv02_05.jpg" width="100%" alt="">
+              </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination swiper-pagination-white"></div>
+      </div>
+        <!-- <div class="cop_fv">
+          Follow your dream
+        </div> -->
+        <!-- <div class="cop_text">
+          We influence and change the world
+        </div> -->
+      </div>
+
+      <div id="1">
+        <div class="service">
+          <div class="service_fv">
+            <h1><span class="big">S</span>ervice
+          </div>
+          <div class="service_content">
+            <div class="service_title">
+              広告代理事業
+            </div>
+            <div class="service_img hover-d">
+              <img class="img_move"  src="../img/s_02.jpg" alt="広告事業の画像が入ります">
+            </div>
+            <div class="service_text">
+              <i class="fas fa-users-cog fa-2x"></i>　<span class="t_a">ディスプレイ広告</span><br>
+            </div>
+            <div class="service_detail animation">
+              Facebook,Google,LINEをメインにディスプレイ広告を配信。
+              独自のクリエイティブロジックで、効果を最大限にし完全成果報酬型で
+              売上げにコミットします。
+            </div>
+
+            <div class="service_text">
+              <i class="fas fa-search-plus fa-2x"></i>　<span class="t_a">リスティング広告</span><br>
+            </div>
+            <div class="service_detail animation">
+              商品を拡大してく上で、リスティング広告を実施するのは必須となります。
+              Googleのアルゴリズムを理解した上で、アカウントの最適化、入札、KWを網羅し
+              最適な配信を行います。
+            </div>
+
+            <div class="service_text">
+              <i class="fab fa-researchgate fa-2x"></i>　<span class="t_a">SEO</span><br>
+            </div>
+            <div class="service_detail animation">
+              検索面はリスティング広告だけではなく、オーガニック流入のユーザーを
+              獲得する施策SEOで全体のCPAを安定化させます。
+              コンテンツを弊社の蓄積したデータをもとに改善し、収益を最大化させ
+              全体の効率を整えます。
+            </div>
+
+            <div class="service_text">
+              <i class="fab fa-instagram fa-2x"></i>　<span class="t_a">インフルエンサー</span><br>
+            </div>
+            <div class="service_detail animation">
+              弊社が抱えているインフルエンサーを活用し、SNSのマーケティングが可能。
+              圧倒的なフォロワーの質と拡散力があるので単発的な施策ではなく
+              長期的で且つ最速に件数を上げることができます。
+            </div>
+
+            <div class="service_text">
+              <i class="fas fa-user-friends fa-2x"></i>　<span class="t_a">キャスティング</span><br>
+            </div>
+            <div class="service_detail animation">
+              お客様の商品にあった最適なブランディングを行います。
+              ジャンルに問わず様々なパッケージをご用意しているので
+              ブランドイメージを崩すことなく収益の最大化を見込むことができ
+              広告運用効率の改善を図ります。
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="2">
+        <div class="detail">
+          <div class="detail_fv">
+            <h1><span class="big">A</span>bout</h1>
+          </div>
+          <div class="detail_text">
+              名称　　　　FIXER.inc</br>
+              設立　　　　2020年4月</br>
+              代表番号　　<span class="tel">03-6860-3489</span></br>
+              本社　　　　〒150-0012</br>
+              　　　　　　東京都港区芝大門2-1-18GSハイム芝大門708</br>
+              代表取締役　岩切大和</br>
+              事業内容　　貿易事業/インターネット広告/キャスティング</br>
+              主要銀行　　みずほ銀行 新宿新都心支店
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <div class="footer_content">
+          <div class="footer_title">
+            FIXER.inc
+          </div>
+          <ul class="nav">
+            <!-- <li><a href="#1">About</a></li> -->
+            <li><a href="#1">Service</a></li>
+            <li><a href="#2">About</a></li>
+          </ul>
+        </div>
+        <div class="footer_right">COPYRIGHT 2020 © FIXER.inc ALL RIGHTS RESERVED</div>
+      </div>
+    </div>
+
+  <!----------------------モバイルメニュー----------------------->
+  <!-- <nav class="mobile-menu">
+    <ul class="mobile-menu__main">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#1">
+            <span class="main-title">About</span>
+            <span class="sub-title">私たちについて</span>
+        </a>
+      </li>
+      <li class="mobile-menu__item">
+          <a class="mobile-menu__link"href="#2">
+              <span class="main-title">Service</span>
+              <span class="sub-title">サービス内容</span>
+          </a>
+      </li>
+      <li class="mobile-menu__item">
+          <a class="mobile-menu__link"href="#3">
+              <span class="main-title">Company</span>
+              <span class="sub-title">会社概要</span>
+          </a>
+      </li>
+    </ul>
+  </nav> -->
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/a.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sl.js"></script>
+  <script src="js/hb.js"></script>
+  <script src="js/scroll-polyfill.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/font_animation.js"></script>
+
+
+
+</body>
+</html>
